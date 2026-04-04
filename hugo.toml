@@ -1,0 +1,45 @@
+baseURL = 'https://kemo.uz.ua/'
+title = 'KJMC Uzhhorod'
+
+defaultContentLanguage = 'uk'
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.uk]
+    languageName = 'Українська'
+    languageCode = 'uk'
+    weight = 1
+    title = 'КЄМО Ужгород — Єврейська Месіанська Громада'
+    [languages.uk.params]
+      description = 'Конгрегація Євреїв Месіанського Юдаїзму м. Ужгород'
+      locale = 'uk_UA'
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en'
+    weight = 2
+    title = 'KJMC Uzhhorod — Messianic Jewish Congregation'
+    [languages.en.params]
+      description = 'Jewish Congregation of Messianic Judaism in the City of Uzhhorod, Transcarpathia, Ukraine'
+      locale = 'en_US'
+
+[params]
+  author = 'KJMC Uzhhorod'
+  donateURL = 'https://donorbox.org/support-kjmc-uzhgorod-messianic-congregation-in-wartime-ukraine'
+  youtube = 'https://www.youtube.com/@kemoUzhgorod'
+  facebook = 'https://www.facebook.com/kjmc.uzhhorod'
+  instagram = 'https://www.instagram.com/kjmc.uzhgorod'
+  email = 'oleksandr.holota@kemo.uz.ua'
+  address = 'вул. Швабська 51а, 2-й поверх, Ужгород'
+  edrpou = '45313979'
+  shabbat = 'Щосуботи о 13:00'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[sitemap]
+  changeFreq = 'weekly'
+  priority = 0.5
+
+enableRobotsTXT = true

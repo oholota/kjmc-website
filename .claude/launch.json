@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hugo-dev",
+      "runtimeExecutable": "/Users/oleksandrh/.local/bin/hugo",
+      "runtimeArgs": ["server", "--buildDrafts", "--disableFastRender"],
+      "port": 1313
+    }
+  ]
+}

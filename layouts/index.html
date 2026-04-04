@@ -1,0 +1,93 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}</h1>
+    <p class="hero-subtitle">{{ if eq .Lang "uk" }}Єврейська Месіанська Громада в Закарпатті{{ else }}Messianic Jewish Congregation in Transcarpathia, Ukraine{{ end }}</p>
+    <div class="hero-buttons">
+      <a href="{{ .Site.Params.donateURL }}" class="btn btn-primary" target="_blank" rel="noopener">
+        {{ if eq .Lang "uk" }}Підтримати{{ else }}Support Us{{ end }}
+      </a>
+      <a href="{{ if eq .Lang "uk" }}/uk/pro-nas/{{ else }}/en/about/{{ end }}" class="btn btn-secondary">
+        {{ if eq .Lang "uk" }}Дізнатися більше{{ else }}Learn More{{ end }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Snippet -->
+<section class="section about-home">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>{{ if eq .Lang "uk" }}Хто ми{{ else }}Who We Are{{ end }}</h2>
+        {{ .Content }}
+      </div>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-number">65</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}членів громади{{ else }}Members{{ end }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">36</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}учнів Школи Писання{{ else }}Scripture School{{ end }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{ if eq .Lang "uk" }}Сотні{{ else }}Hundreds{{ end }}</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}людям допомогли{{ else }}People Helped{{ end }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">2022</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}рік заснування{{ else }}Founded{{ end }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shabbat Info -->
+<section class="section shabbat-banner">
+  <div class="container center">
+    <h2>{{ if eq .Lang "uk" }}Шабат Шалом!{{ else }}Shabbat Shalom!{{ end }}</h2>
+    <p>{{ if eq .Lang "uk" }}Приходьте на зустріч Шабату щосуботи о 13:00{{ else }}Join us for Shabbat every Saturday at 1:00 PM{{ end }}</p>
+    <p class="address">{{ .Site.Params.address }}</p>
+  </div>
+</section>
+
+<!-- YouTube Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="center">{{ if eq .Lang "uk" }}Останні відео{{ else }}Latest Videos{{ end }}</h2>
+    <div class="video-grid">
+      {{ range .Site.Data.youtube }}
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" alt="{{ .title }}" loading="lazy">
+          <p>{{ .title }}</p>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <p class="center" style="margin-top:1.5rem;">
+      <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="btn btn-secondary">
+        {{ if eq .Lang "uk" }}Дивитися на YouTube{{ else }}Watch on YouTube{{ end }}
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Donate CTA -->
+<section class="section donate-cta">
+  <div class="container center">
+    <h2>{{ if eq .Lang "uk" }}Підтримайте громаду{{ else }}Support Our Community{{ end }}</h2>
+    <p>{{ if eq .Lang "uk" }}Ваша пожертва допомагає нам продовжувати служіння, гуманітарну допомогу та розвиток громади під час війни.{{ else }}Your donation helps us continue our ministry, humanitarian aid, and community development during wartime.{{ end }}</p>
+    <a href="{{ .Site.Params.donateURL }}" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+      {{ if eq .Lang "uk" }}Пожертвувати{{ else }}Donate Now{{ end }}
+    </a>
+  </div>
+</section>
+
+{{ end }}
+

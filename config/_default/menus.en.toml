@@ -1,0 +1,19 @@
+[[main]]
+  name = "Home"
+  url = "/en/"
+  weight = 1
+
+[[main]]
+  name = "About"
+  url = "/en/about/"
+  weight = 2
+
+[[main]]
+  name = "Donate"
+  url = "/en/donate/"
+  weight = 3
+
+[[main]]
+  name = "Contact"
+  url = "/en/contact/"
+  weight = 4

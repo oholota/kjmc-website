@@ -1,0 +1,23 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="{{ .Site.Home.RelPermalink }}" class="logo">
+      <span class="logo-star">&#10017;</span>
+      <span class="logo-text">{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      <a href="{{ .Site.Params.donateURL }}" class="btn-donate" target="_blank" rel="noopener">
+        {{ if eq $currentPage.Lang "uk" }}Пожертвувати{{ else }}Donate{{ end }}
+      </a>
+      {{ range $currentPage.Translations }}
+      <a href="{{ .Permalink }}" class="lang-switch">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </div>
+  </nav>
+</header>

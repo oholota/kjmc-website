@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-content">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+    <article class="post-card">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ if .Description }}<p>{{ .Description }}</p>{{ end }}
+      <time>{{ .Date.Format "02.01.2006" }}</time>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

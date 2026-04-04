@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}</h4>
+      <p>{{ if eq .Lang "uk" }}Конгрегація Євреїв Месіанського Юдаїзму м. Ужгород{{ else }}Jewish Congregation of Messianic Judaism, Uzhhorod{{ end }}</p>
+      <p>{{ if eq .Lang "uk" }}ЄДРПОУ{{ else }}EDRPOU{{ end }}: {{ .Site.Params.edrpou }}</p>
+    </div>
+    <div class="footer-col">
+      <h4>{{ if eq .Lang "uk" }}Контакти{{ else }}Contact{{ end }}</h4>
+      <p>{{ .Site.Params.address }}</p>
+      <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      <p>{{ if eq .Lang "uk" }}Шабат{{ else }}Shabbat{{ end }}: {{ .Site.Params.shabbat }}</p>
+    </div>
+    <div class="footer-col">
+      <h4>{{ if eq .Lang "uk" }}Ми в соцмережах{{ else }}Follow Us{{ end }}</h4>
+      <div class="social-links">
+        <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener">YouTube</a>
+        <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Facebook</a>
+        <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} {{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}</p>
+  </div>
+</footer>
