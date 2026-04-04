@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KJMC Uzhhorod — КЄМО Ужгород</title>
+  <script>
+    var lang = (navigator.language || navigator.userLanguage || 'uk').toLowerCase();
+    if (lang.startsWith('uk') || lang.startsWith('ru') || lang.startsWith('be') || lang.startsWith('pl') || lang.startsWith('sk') || lang.startsWith('hu') || lang.startsWith('cs')) {
+      window.location.replace('/uk/');
+    } else {
+      window.location.replace('/en/');
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/uk/">
+  </noscript>
+</head>
+<body></body>
+</html>
