@@ -1,6 +1,6 @@
 <header class="site-header">
   <nav class="nav-container">
-    <a href="{{ .Site.Home.RelPermalink }}" class="logo">
+    <a href="/{{ .Lang }}/" class="logo">
       <img src="/img/logo.png" alt="KJMC" class="logo-img">
       <span class="logo-text">{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}</span>
     </a>
@@ -8,14 +8,21 @@
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ if eq .Lang "uk" }}
+      <a href="/uk/">Головна</a>
+      <a href="/uk/pro-nas/">Про нас</a>
+      <a href="/uk/pozhertvy/">Пожертви</a>
+      <a href="/uk/kontakty/">Контакти</a>
+      {{ else }}
+      <a href="/en/">Home</a>
+      <a href="/en/about/">About</a>
+      <a href="/en/donate/">Donate</a>
+      <a href="/en/contact/">Contact</a>
       {{ end }}
       <a href="{{ .Site.Params.donateURL }}" class="btn-donate" target="_blank" rel="noopener">
-        {{ if eq $currentPage.Lang "uk" }}Пожертвувати{{ else }}Donate{{ end }}
+        {{ if eq .Lang "uk" }}Пожертвувати{{ else }}Donate{{ end }}
       </a>
-      {{ range $currentPage.Translations }}
+      {{ range .Translations }}
       <a href="{{ .Permalink }}" class="lang-switch">{{ .Language.LanguageName }}</a>
       {{ end }}
     </div>
