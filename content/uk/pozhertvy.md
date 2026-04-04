@@ -25,7 +25,7 @@ translationKey: donate
 
 ### Банківський переказ (Україна)
 
-Для переказів у гривнях зверніться до нас за реквізитами: [oleksandr.holota@kemo.uz.ua](mailto:oleksandr.holota@kemo.uz.ua)
+Для переказів у гривнях зверніться до нас за реквізитами: [office@kemo.uz.ua](mailto:office@kemo.uz.ua)
 
 ---
 

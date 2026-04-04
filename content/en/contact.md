@@ -14,7 +14,7 @@ translationKey: contact
 Every Saturday at 1:00 PM — come join us!
 
 ### Email
-[oleksandr.holota@kemo.uz.ua](mailto:oleksandr.holota@kemo.uz.ua)
+[office@kemo.uz.ua](mailto:office@kemo.uz.ua)
 
 ### Social Media
 

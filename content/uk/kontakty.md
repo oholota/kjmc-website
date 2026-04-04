@@ -14,7 +14,7 @@ translationKey: contact
 Щосуботи о 13:00 — приходьте!
 
 ### Email
-[oleksandr.holota@kemo.uz.ua](mailto:oleksandr.holota@kemo.uz.ua)
+[office@kemo.uz.ua](mailto:office@kemo.uz.ua)
 
 ### Соціальні мережі
 
