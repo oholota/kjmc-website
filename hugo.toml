@@ -13,6 +13,23 @@ defaultContentLanguageInSubdir = true
     [languages.uk.params]
       description = 'Конгрегація Євреїв Месіанського Юдаїзму м. Ужгород'
       locale = 'uk_UA'
+    [[languages.uk.menus.main]]
+      name = 'Головна'
+      url = '/uk/'
+      weight = 1
+    [[languages.uk.menus.main]]
+      name = 'Про нас'
+      url = '/uk/pro-nas/'
+      weight = 2
+    [[languages.uk.menus.main]]
+      name = 'Пожертви'
+      url = '/uk/pozhertvy/'
+      weight = 3
+    [[languages.uk.menus.main]]
+      name = 'Контакти'
+      url = '/uk/kontakty/'
+      weight = 4
+
   [languages.en]
     languageName = 'English'
     languageCode = 'en'
@@ -21,6 +38,22 @@ defaultContentLanguageInSubdir = true
     [languages.en.params]
       description = 'Jewish Congregation of Messianic Judaism in the City of Uzhhorod, Transcarpathia, Ukraine'
       locale = 'en_US'
+    [[languages.en.menus.main]]
+      name = 'Home'
+      url = '/en/'
+      weight = 1
+    [[languages.en.menus.main]]
+      name = 'About'
+      url = '/en/about/'
+      weight = 2
+    [[languages.en.menus.main]]
+      name = 'Donate'
+      url = '/en/donate/'
+      weight = 3
+    [[languages.en.menus.main]]
+      name = 'Contact'
+      url = '/en/contact/'
+      weight = 4
 
 [params]
   author = 'KJMC Uzhhorod'
