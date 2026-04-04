@@ -65,7 +65,7 @@ p { margin-bottom: 1rem; }
   color: var(--blue-dark);
 }
 .logo:hover { color: var(--blue-dark); }
-.logo-star { color: var(--gold); font-size: 1.5rem; }
+.logo-img { width: 32px; height: 32px; border-radius: 50%; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -116,8 +116,8 @@ p { margin-bottom: 1rem; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: url('/img/hero-bg.jpg') center/cover;
-  opacity: 0.15;
+  background: url('/img/hero.jpg') center/cover;
+  opacity: 0.25;
 }
 .hero-content { position: relative; z-index: 1; max-width: 700px; }
 .hero h1 { font-size: 3rem; color: var(--white); margin-bottom: 0.5rem; }
