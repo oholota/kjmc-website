@@ -6,6 +6,7 @@ defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.uk]
+    contentDir = 'content/uk'
     languageName = 'Українська'
     languageCode = 'uk'
     weight = 1
@@ -31,6 +32,7 @@ defaultContentLanguageInSubdir = true
       weight = 4
 
   [languages.en]
+    contentDir = 'content/en'
     languageName = 'English'
     languageCode = 'en'
     weight = 2
