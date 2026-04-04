@@ -153,6 +153,9 @@ p { margin-bottom: 1rem; }
 .stat-number { display: block; font-size: 2.2rem; font-weight: 700; color: var(--gold); font-family: 'Frank Ruhl Libre', serif; }
 .stat-label { font-size: 0.9rem; color: var(--text-light); }
 
+/* ===== Facebook Feed ===== */
+.fb-feed-container { display: flex; justify-content: center; }
+
 /* ===== Shabbat Banner ===== */
 .shabbat-banner {
   background: var(--blue-dark);
