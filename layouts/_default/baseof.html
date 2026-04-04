@@ -5,22 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <!-- Performance: preconnect & preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/logo.png">
+  <link rel="apple-touch-icon" href="/img/logo.png">
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}uk/">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:locale" content="{{ .Site.Language.Params.locale }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <link rel="canonical" href="{{ .Permalink }}">
-  {{ range .Translations }}
-  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
-  {{ end }}
-  <link rel="icon" type="image/png" href="/img/logo.png">
-  <meta property="og:image" content="/img/hero.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/hero.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}img/hero.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ReligiousOrganization",
+    "name": "{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}",
+    "alternateName": ["KJMC Uzhhorod", "KEMO Uzhhorod", "КЄМО Ужгород"],
+    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.BaseURL }}img/logo.png",
+    "image": "{{ .Site.BaseURL }}img/hero.jpg",
+    "email": "{{ .Site.Params.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shvabska St. 51a, 2nd floor",
+      "addressLocality": "Uzhhorod",
+      "addressRegion": "Zakarpattia Oblast",
+      "addressCountry": "UA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.618,
+      "longitude": 22.298
+    },
+    "sameAs": [
+      "{{ .Site.Params.youtube }}",
+      "{{ .Site.Params.facebook }}",
+      "{{ .Site.Params.instagram }}",
+      "https://t.me/eUzhgorod"
+    ],
+    "foundingDate": "2022-02-27",
+    "event": {
+      "@type": "Event",
+      "name": "Shabbat Service",
+      "description": "Weekly Shabbat gathering",
+      "startDate": "2026-04-12T13:00:00+03:00",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": "Saturday",
+        "startTime": "13:00"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "KJMC Uzhhorod",
+        "address": "Shvabska St. 51a, 2nd floor, Uzhhorod"
+      }
+    }
+  }
+  </script>
+
   {{ block "head" . }}{{ end }}
 </head>
 <body>
