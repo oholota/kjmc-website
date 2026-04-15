@@ -5,7 +5,7 @@ description: "KJMC Uzhhorod (KEMO) is a Messianic Jewish Congregation in Transca
 
 **KJMC Uzhhorod** (locally known as KEMO, from the Ukrainian: КЄМО — Конгрегація Євреїв Месіанського Юдаїзму) is a Messianic Jewish Congregation in Transcarpathia — the westernmost region of Ukraine, bordering Hungary, Slovakia, Poland, and Romania.
 
-Our journey began on **February 27, 2022**, when we arrived in Transcarpathia just three days after Russia's full-scale invasion. Since then, our community has grown to 65 members, most aged 20-30.
+Our journey began on **February 27, 2022**, when we arrived in Transcarpathia just three days after Russia's full-scale invasion. Since then, our community has grown into a vibrant group of young believers, most aged 20–30.
 
 We are part of the **KJMC network** (Union of Jewish Congregations of Messianic Judaism), a federation of 57+ congregations across 21 countries rooted in Kyiv's KJMC, established in 1994.
 

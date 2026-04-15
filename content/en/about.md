@@ -7,7 +7,7 @@ translationKey: about
 
 ## Our Story
 
-KJMC Uzhhorod (locally known as KEMO, from the Ukrainian acronym КЄМО) began on February 27, 2022, when our leader and his wife arrived in Transcarpathia — just three days after Russia launched its full-scale invasion of Ukraine. What began as a small group of believers has grown into a vibrant community of 65 members. Officially registered on December 25, 2023 (EDRPOU: 45313979).
+KJMC Uzhhorod (locally known as KEMO, from the Ukrainian acronym КЄМО) began on February 27, 2022, when our leader and his wife arrived in Transcarpathia — just three days after Russia launched its full-scale invasion of Ukraine. What began as a small group of believers has grown into a vibrant community. Officially registered on December 25, 2023 (EDRPOU: 45313979).
 
 We are officially registered as a religious organization (EDRPOU: 45313979, registered December 25, 2023) and are part of the KJMC network — a federation of 57+ congregations across 21 countries, rooted in Kyiv's KJMC, founded by Rabbi Boris Grisenko in 1994.
 
@@ -26,8 +26,7 @@ Today, we serve these people — those seeking their Jewish roots and faith in M
 
 ## Our Community
 
-- **65 members** — mostly young people aged 20-30
-- **Scripture School** — 36 regular attendees
+- **Scripture School** — regular attendees
 - **Humanitarian aid (chesed)** — hundreds of people helped
 - **Mukachevo outreach** — a historically Jewish city across the mountains
 - **Young, devoted team** — older leaders were mobilized, but our young team carries on
