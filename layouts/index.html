@@ -31,6 +31,14 @@
           <span class="stat-label">{{ if eq .Lang "uk" }}людям допомогли{{ else }}People Helped{{ end }}</span>
         </div>
         <div class="stat">
+          <span class="stat-number">21</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}країн у мережі КЄМО{{ else }}Countries in KJMC Network{{ end }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4</span>
+          <span class="stat-label">{{ if eq .Lang "uk" }}сусідніх країн ЄС{{ else }}Neighboring EU Countries{{ end }}</span>
+        </div>
+        <div class="stat">
           <span class="stat-number">2022</span>
           <span class="stat-label">{{ if eq .Lang "uk" }}рік заснування{{ else }}Founded{{ end }}</span>
         </div>
@@ -45,6 +53,34 @@
     <h2>{{ if eq .Lang "uk" }}Шабат Шалом!{{ else }}Shabbat Shalom!{{ end }}</h2>
     <p>{{ if eq .Lang "uk" }}Приходьте на зустріч Шабату щосуботи о 13:00{{ else }}Join us for Shabbat every Saturday at 1:00 PM{{ end }}</p>
     <p class="address">{{ .Site.Params.address }}</p>
+  </div>
+</section>
+
+<!-- Inter-ethnic cooperation -->
+<section class="section">
+  <div class="container">
+    <h2 class="center">{{ if eq .Lang "uk" }}Міст між культурами{{ else }}A Bridge Between Cultures{{ end }}</h2>
+    <p style="max-width:760px;margin:0 auto 2rem;text-align:center;font-size:1.05rem;line-height:1.6;">
+      {{ if eq .Lang "uk" }}
+        Закарпаття — земля, де століттями перетиналися долі євреїв, українців, угорців, словаків, румунів та ромів. Ми продовжуємо цю традицію міжетнічної співпраці: будуємо мости між єврейською спадщиною та християнською вірою, між Україною та народами Європи, між пам'яттю про минуле та надією на майбутнє.
+      {{ else }}
+        Transcarpathia is a land where for centuries the destinies of Jews, Ukrainians, Hungarians, Slovaks, Romanians, and Roma have intersected. We continue this tradition of inter-ethnic cooperation: building bridges between Jewish heritage and Christian faith, between Ukraine and the peoples of Europe, between memory of the past and hope for the future.
+      {{ end }}
+    </p>
+    <div class="stats-grid" style="max-width:900px;margin:0 auto;">
+      <div class="stat">
+        <span class="stat-number" style="font-size:1.4rem;">{{ if eq .Lang "uk" }}Єврейська спадщина{{ else }}Jewish Heritage{{ end }}</span>
+        <span class="stat-label">{{ if eq .Lang "uk" }}відродження коріння Закарпаття{{ else }}Reviving the roots of Transcarpathia{{ end }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" style="font-size:1.4rem;">{{ if eq .Lang "uk" }}Служіння хесед{{ else }}Chesed Ministry{{ end }}</span>
+        <span class="stat-label">{{ if eq .Lang "uk" }}допомога незалежно від віри та нації{{ else }}Aid regardless of faith or nationality{{ end }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" style="font-size:1.4rem;">{{ if eq .Lang "uk" }}Міжконфесійний діалог{{ else }}Interfaith Dialogue{{ end }}</span>
+        <span class="stat-label">{{ if eq .Lang "uk" }}єдність у різноманітті{{ else }}Unity in diversity{{ end }}</span>
+      </div>
+    </div>
   </div>
 </section>
 
