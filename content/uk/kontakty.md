@@ -8,7 +8,7 @@ translationKey: contact
 ## Зв'яжіться з нами
 
 ### Адреса
-вул. Швабська 51а, 2-й поверх, Ужгород, Закарпатська область, Україна
+вул. Собранецька 72, 1-й поверх, Ужгород, Закарпатська область, Україна
 
 ### Шабат
 Щосуботи о 13:00 — приходьте!
@@ -24,4 +24,4 @@ translationKey: contact
 
 ### Як нас знайти
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2649.5!2d22.298!3d48.618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDM3JzA0LjgiTiAyMsKwMTcnNTIuOCJF!5e0!3m2!1suk!2sua!4v1" width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://maps.google.com/maps?q=%D0%B2%D1%83%D0%BB.%20%D0%A1%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B5%D1%86%D1%8C%D0%BA%D0%B0%2072%2C%20%D0%A3%D0%B6%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&hl=uk&t=m&output=embed" width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
