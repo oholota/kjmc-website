@@ -8,7 +8,7 @@ translationKey: contact
 ## Get in Touch
 
 ### Address
-72 Sobranetska St., 1st floor, Uzhhorod, Zakarpattia Oblast, Ukraine
+72 Sobranetska St., Uzhhorod, Zakarpattia Oblast, Ukraine
 
 ### Shabbat
 Every Saturday at 1:00 PM — come join us!
