@@ -6,16 +6,20 @@
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
-  <!-- Performance: preconnect & preload -->
+  <!-- Performance: preconnect, preload, dns-prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://img.youtube.com">
+  <link rel="dns-prefetch" href="https://www.facebook.com">
+  <link rel="preload" as="image" href="/img/hero.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="192x192" href="/img/logo.png">
   <link rel="apple-touch-icon" href="/img/logo.png">
+  <meta name="theme-color" content="#011043">
 
   <!-- Canonical & hreflang -->
   <link rel="canonical" href="{{ .Permalink }}">
@@ -127,5 +131,23 @@
   </main>
   {{ partial "footer.html" . }}
   {{ block "scripts" . }}{{ end }}
+  <script>
+    // Click-to-load Facebook embed. Saves ~1MB of FB scripts until user opts in.
+    document.querySelectorAll('.fb-lite').forEach(function (el) {
+      function load() {
+        var ifr = document.createElement('iframe');
+        ifr.src = el.dataset.fb;
+        ifr.width = 500; ifr.height = 600;
+        ifr.style.cssText = 'border:0;border-radius:12px;box-shadow:0 6px 20px -8px rgba(1,16,67,.15);max-width:100%;';
+        ifr.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+        ifr.loading = 'eager';
+        ifr.allowFullscreen = true;
+        ifr.title = 'Facebook';
+        el.replaceWith(ifr);
+      }
+      el.addEventListener('click', load);
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
+    });
+  </script>
 </body>
 </html>
