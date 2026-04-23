@@ -9,8 +9,8 @@
   <!-- Performance: preconnect & preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Favicon -->
@@ -70,19 +70,50 @@
     "event": {
       "@type": "Event",
       "name": "Shabbat Service",
-      "description": "Weekly Shabbat gathering",
+      "description": "Weekly Shabbat gathering — free to attend, open to all",
       "startDate": "2026-04-12T13:00:00+03:00",
+      "endDate": "2026-04-12T15:00:00+03:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventSchedule": {
         "@type": "Schedule",
         "repeatFrequency": "P1W",
-        "byDay": "Saturday",
-        "startTime": "13:00"
+        "byDay": "https://schema.org/Saturday",
+        "startTime": "13:00",
+        "endTime": "15:00",
+        "startDate": "2022-02-27",
+        "scheduleTimezone": "Europe/Kiev"
       },
       "location": {
         "@type": "Place",
         "name": "KJMC Uzhhorod",
-        "address": "Sobranetska St. 72, Uzhhorod"
-      }
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sobranetska St. 72",
+          "addressLocality": "Uzhhorod",
+          "addressRegion": "Zakarpattia Oblast",
+          "postalCode": "88000",
+          "addressCountry": "UA"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "{{ if eq .Lang "uk" }}КЄМО Ужгород{{ else }}KJMC Uzhhorod{{ end }}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ .Site.BaseURL }}",
+        "price": "0",
+        "priceCurrency": "UAH",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2022-02-27"
+      },
+      "image": "{{ .Site.BaseURL }}img/hero.jpg"
     }
   }
   </script>
