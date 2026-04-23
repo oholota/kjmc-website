@@ -287,27 +287,6 @@ p { margin-bottom: 1rem; }
 .fb-feed-container { display: flex; justify-content: center; }
 .fb-feed-container iframe { border-radius: var(--radius); box-shadow: var(--shadow); border: none; width: 500px; max-width: 100%; height: 600px; }
 
-/* Click-to-load placeholder (avoids loading ~1MB of FB scripts on initial page) */
-.fb-lite {
-  width: 500px; max-width: 100%; height: 600px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, #f9fbff 0%, #eef4fb 100%);
-  cursor: pointer; user-select: none;
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.15s, box-shadow 0.2s, background 0.15s;
-}
-.fb-lite:hover, .fb-lite:focus {
-  outline: none;
-  border-color: var(--sky);
-  background: linear-gradient(180deg, #f9fbff 0%, #e0f2fe 100%);
-  box-shadow: 0 14px 30px -14px rgba(0,143,232,0.28);
-}
-.fb-lite-inner { text-align: center; padding: 2rem; }
-.fb-lite-inner svg { margin: 0 auto 0.75rem; display: block; }
-.fb-lite-inner p { color: var(--text-light); font-size: 0.95rem; margin: 0; }
-
 /* ===== Shabbat Banner ===== */
 .shabbat-banner {
   position: relative;

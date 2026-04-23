@@ -106,17 +106,18 @@
   </div>
 </section>
 
-<!-- Facebook Feed (click-to-load — saves ~1MB of FB scripts on initial page load) -->
+<!-- Facebook Feed — native lazy iframe: loads only when user scrolls close -->
 <section class="section">
   <div class="container">
     <h2 class="center">{{ if eq .Lang "uk" }}Наші новини{{ else }}Our News{{ end }}</h2>
     <div class="fb-feed-container">
-      <div class="fb-lite" data-fb="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkjmc.uzhhorod&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" role="button" tabindex="0" aria-label="{{ if eq .Lang "uk" }}Завантажити стрічку Facebook{{ else }}Load Facebook feed{{ end }}">
-        <div class="fb-lite-inner">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          <p>{{ if eq .Lang "uk" }}Натисніть щоб завантажити нашу стрічку Facebook{{ else }}Tap to load our Facebook feed{{ end }}</p>
-        </div>
-      </div>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkjmc.uzhhorod&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        width="500" height="600" title="Facebook"
+        style="border:0;border-radius:12px;box-shadow:0 6px 20px -8px rgba(1,16,67,.15);max-width:100%;"
+        scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        loading="lazy">
+      </iframe>
     </div>
     <p class="center" style="margin-top:1.5rem;">
       <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener" class="btn btn-secondary">

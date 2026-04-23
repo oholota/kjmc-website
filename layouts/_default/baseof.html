@@ -14,7 +14,8 @@
   <link rel="preload" as="image" href="/img/hero.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  {{ $style := resources.Get "css/style.css" | minify | fingerprint "sha256" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="192x192" href="/img/logo.png">
@@ -131,23 +132,5 @@
   </main>
   {{ partial "footer.html" . }}
   {{ block "scripts" . }}{{ end }}
-  <script>
-    // Click-to-load Facebook embed. Saves ~1MB of FB scripts until user opts in.
-    document.querySelectorAll('.fb-lite').forEach(function (el) {
-      function load() {
-        var ifr = document.createElement('iframe');
-        ifr.src = el.dataset.fb;
-        ifr.width = 500; ifr.height = 600;
-        ifr.style.cssText = 'border:0;border-radius:12px;box-shadow:0 6px 20px -8px rgba(1,16,67,.15);max-width:100%;';
-        ifr.allow = 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
-        ifr.loading = 'eager';
-        ifr.allowFullscreen = true;
-        ifr.title = 'Facebook';
-        el.replaceWith(ifr);
-      }
-      el.addEventListener('click', load);
-      el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
-    });
-  </script>
 </body>
 </html>
