@@ -92,7 +92,7 @@
       {{ range .Site.Data.youtube }}
       <div class="video-card">
         <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">
-          <img src="https://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" alt="{{ .title }}" loading="lazy">
+          <div class="thumb"><img src="https://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" alt="{{ .title }}" loading="lazy"></div>
           <p>{{ .title }}</p>
         </a>
       </div>
