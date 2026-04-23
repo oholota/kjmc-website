@@ -1,1 +1,5 @@
+# Bare domain → Ukrainian homepage (real 301 so GSC doesn't see the
+# Hugo-generated alias HTML that carries a noindex meta tag).
+/ /uk/ 301
+# www → apex
 https://www.kemo.uz.ua/* https://kemo.uz.ua/:splat 301

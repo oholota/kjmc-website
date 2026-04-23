@@ -73,15 +73,16 @@ p { margin-bottom: 1rem; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 
 /* Subtle brand watermark on every .section (except hero/shabbat/donate which
-   have their own dark treatment). Ultra-low opacity so it reads as texture. */
+   have their own dark treatment). Uses the real logo at low opacity. */
 .section:not(.shabbat-banner):not(.donate-cta)::before {
   content: "";
   position: absolute;
   right: 3%; top: 50%;
   transform: translateY(-50%);
-  width: 280px; height: 280px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23008FE8' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'><circle cx='50' cy='50' r='46'/><path d='M 6 40 Q 28 30 50 38 T 94 44'/><path d='M 6 58 Q 28 68 50 62 T 94 56'/><path d='M 50 18 L 74 60 L 26 60 Z'/><path d='M 50 82 L 74 40 L 26 40 Z'/></g></svg>");
+  width: 300px; height: 300px;
+  background-image: url('/img/logo.png');
   background-size: contain; background-repeat: no-repeat;
+  opacity: 0.06;
   pointer-events: none;
   z-index: 0;
 }
@@ -191,14 +192,15 @@ p { margin-bottom: 1rem; }
   mix-blend-mode: luminosity;
   will-change: transform;
 }
-/* Brand Magen David watermark in the bottom-right */
+/* Brand watermark: the real КЄМО logo, bottom-right */
 .hero::after {
   content: "";
   position: absolute;
-  right: -90px; bottom: -90px;
-  width: 360px; height: 360px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='0.12'><circle cx='50' cy='50' r='46'/><path d='M 6 40 Q 28 30 50 38 T 94 44'/><path d='M 6 58 Q 28 68 50 62 T 94 56'/><path d='M 50 18 L 74 60 L 26 60 Z'/><path d='M 50 82 L 74 40 L 26 40 Z'/></g></svg>");
+  right: -80px; bottom: -80px;
+  width: 380px; height: 380px;
+  background-image: url('/img/logo.png');
   background-size: contain; background-repeat: no-repeat;
+  opacity: 0.22;
   pointer-events: none;
 }
 .hero-content {
@@ -291,9 +293,10 @@ p { margin-bottom: 1rem; }
   content: "";
   position: absolute;
   left: -60px; top: -60px;
-  width: 220px; height: 220px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23EBC25D' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' opacity='0.22'><circle cx='50' cy='50' r='46'/><path d='M 50 18 L 74 60 L 26 60 Z'/><path d='M 50 82 L 74 40 L 26 40 Z'/></g></svg>");
+  width: 240px; height: 240px;
+  background-image: url('/img/logo.png');
   background-size: contain; background-repeat: no-repeat;
+  opacity: 0.18;
   pointer-events: none;
 }
 .shabbat-banner > * { position: relative; z-index: 1; }
@@ -346,9 +349,10 @@ p { margin-bottom: 1rem; }
   content: "";
   position: absolute;
   right: -70px; bottom: -70px;
-  width: 280px; height: 280px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' opacity='0.10'><circle cx='50' cy='50' r='46'/><path d='M 6 40 Q 28 30 50 38 T 94 44'/><path d='M 6 58 Q 28 68 50 62 T 94 56'/><path d='M 50 18 L 74 60 L 26 60 Z'/><path d='M 50 82 L 74 40 L 26 40 Z'/></g></svg>");
+  width: 300px; height: 300px;
+  background-image: url('/img/logo.png');
   background-size: contain; background-repeat: no-repeat;
+  opacity: 0.22;
   pointer-events: none;
 }
 .donate-cta > * { position: relative; z-index: 1; }
