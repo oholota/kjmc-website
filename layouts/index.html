@@ -56,6 +56,23 @@
   </div>
 </section>
 
+<!-- Telegram bot — community service description -->
+<section class="section telegram-bot">
+  <div class="container center">
+    <h2>{{ if eq .Lang "uk" }}Telegram-бот громади{{ else }}Community Telegram bot{{ end }}</h2>
+    <p style="max-width:680px;margin:0 auto 1.6rem;font-size:1.05rem;line-height:1.6;">
+      {{ if eq .Lang "uk" }}
+        У громаді працює Telegram-бот, через який можна дізнаватись новини КЄМО, попросити про молитву за себе чи близьких, разом вивчати Писання та ділитись особистими свідоцтвами. Це місце, де громада залишається на зв'язку поза спільними зустрічами.
+      {{ else }}
+        The community runs a Telegram bot where you can follow KJMC news, request prayer for yourself or loved ones, study Scripture together, and share personal testimonies. It's a place where the community stays connected between gatherings.
+      {{ end }}
+    </p>
+    <a href="{{ .Site.Params.telegramBot }}" class="btn btn-primary" target="_blank" rel="noopener">
+      {{ if eq .Lang "uk" }}Відкрити бота{{ else }}Open the bot{{ end }}
+    </a>
+  </div>
+</section>
+
 <!-- Inter-ethnic cooperation -->
 <section class="section">
   <div class="container">

@@ -63,6 +63,7 @@ defaultContentLanguageInSubdir = true
   youtube = 'https://www.youtube.com/@kemoUzhgorod'
   facebook = 'https://www.facebook.com/kjmc.uzhhorod'
   instagram = 'https://www.instagram.com/kjmc.uzhgorod'
+  telegramBot = 'https://t.me/YeUzhorodBot'
   email = 'office@kemo.uz.ua'
   address = 'вул. Собранецька 72, Ужгород'
   edrpou = '45313979'
