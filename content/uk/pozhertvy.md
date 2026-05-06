@@ -17,7 +17,7 @@ translationKey: donate
 ### Пожертвувати онлайн
 
 <div style="text-align:center; margin: 2rem 0;">
-<a href="https://donorbox.org/support-kjmc-uzhgorod-messianic-congregation-in-wartime-ukraine" class="btn btn-primary btn-large" target="_blank" rel="noopener">Пожертвувати через Donorbox</a>
+<a href="https://donorbox.org/support-kjmc-uzhgorod-messianic-congregation-in-wartime-ukraine" class="btn btn-primary btn-large" target="_blank" rel="noopener" onclick="gtag('event', 'donate_click', {'location': 'donate_page_uk'});">Пожертвувати через Donorbox</a>
 </div>
 
 <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>

@@ -19,7 +19,7 @@
       <a href="/en/donate/">Donate</a>
       <a href="/en/contact/">Contact</a>
       {{ end }}
-      <a href="{{ .Site.Params.donateURL }}" class="btn-donate" target="_blank" rel="noopener">
+      <a href="{{ .Site.Params.donateURL }}" class="btn-donate" target="_blank" rel="noopener" onclick="gtag('event', 'donate_click', {'location': 'header'});">
         {{ if eq .Lang "uk" }}Пожертвувати{{ else }}Donate{{ end }}
       </a>
       {{ range .Translations }}
